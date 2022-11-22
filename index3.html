@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!-- Adding W3Css -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+        overflow-x: hidden;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      body {
+        background: white;
+        color: #000;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .swiper-slide {
+        background-size: cover;
+        background-position: center;
+      }
+
+      .mySwiper2 {
+        height: 80%;
+        width: 100%;   
+        margin-left: 6vw;
+        margin-top:-10vw;
+        width: 40vw;
+        position: absolute;
+      }
+
+      .mySwiper {
+        height: 100vw;
+        box-sizing: border-box;
+        padding: 10px 0;
+        margin-top: -40vw;
+        margin-left: 5vw;
+      }
+
+      .mySwiper .swiper-slide {
+        width: 25%;
+        height: 100%;
+        opacity: 1;
+      }
+
+      .mySwiper .swiper-slide-thumb-active {
+        opacity: 1;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+
+      #allSliderDiv{
+        margin-left: 10vw;
+        margin-top: 3vw;
+        height: 40vw;
+        width: 80vw;
+      }
+
+      #navBar{
+        height: 6.5vw;
+      }
+
+      #logo{
+        height: 6.25vw;
+        width: 6.25vw;
+        border-radius: 0.75vw;
+        margin-left: 5vw;
+      }
+
+      #nextprevBtn{
+        color: black;
+      }
+
+      .smallPhotos{
+        cursor: pointer;
+        height:5vw;
+        margin-left: 10vw;
+
+      }
+
+      .LargeProductPic{
+        height: 40vw;
+        width: 5vw;
+      }
+
+      .prodList1:hover, .prodList2:hover, .prodList3:hover, .prodList4:hover, .prodList5:hover {
+        border: 0.5px solid blue;
+        border-left: 0.5px solid  blue;
+        border-bottom: 0.5px solid  blue;
+        height: 4vw;
+        width:4vw;
+        border-radius: 1vw;
+      }
+
+      /* 
+      .smallPhotos2{
+        margin-top:10vw;
+        margin-left:-12.5vw
+      }
+
+      .smallPhotos3{
+        margin-top:20vw;
+        margin-left:-12.5vw
+      }
+
+      .smallPhotos4{
+        margin-top:30vw;
+        margin-left:-12.5vw
+      } */
+
+      
+      
+    </style>
+  </head>
+
+  <body>
+    
+
+    <div id="navBar" class="w3-card w3-black">
+      <img id="logo" src="./images/logo2.png">
+
+    </div>
+
+
+    <!-- Swiper -->
+    <div id="allSliderDiv">
+
+      <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+      <div thumbsslider="" class="swiper mySwiper swiper-initialized swiper-vertical swiper-pointer-events swiper-free-mode swiper-backface-hidden swiper-thumbs">
+        
+        <div class="swiper-wrapper smallPhotos" id="swiper-wrapper-110f16ef21f1029abd" aria-live="polite" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+          <div class="smallPhotos1 swiper-slide swiper-slide-visible swiper-slide-active" role="group" aria-label="1 / 10" style="width: 5vw; margin-right: 10px;">
+            <img class="prodList1" id="prodSmall1" onmouseover="change1()" src="./images/prod1.png">
+          </div>
+          <div class="smallPhotos2 swiper-slide swiper-slide-visible swiper-slide-next swiper-slide-thumb-active" role="group" aria-label="2 / 10" style="width: 5vw; margin-right: 10px;">
+            <img class="prodList2" src="./images/prod2.png">
+          </div>
+          <div class="smallPhotos3 swiper-slide swiper-slide-visible" role="group" aria-label="3 / 10" style="width: 5vw; margin-right: 10px;">
+            <img class="prodList3" src="./images/prod3.png">
+          </div>
+          <div class="smallPhotos4 swiper-slide swiper-slide-visible" role="group" aria-label="4 / 10" style="width: 5vw; margin-right: 10px;">
+            <img class="prodList4" src="./images/prod4.png">
+          </div>
+          <div class="swiper-slide smallPhotos5" role="group" aria-label="5 / 10" style="width: 1440px; margin-right: 10px;opacity: 1;">
+            <img class="prodList5" src="./images/logo2.png">
+          </div>
+        </div>
+
+
+        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2 swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
+          
+          <div class="LargeProductPic swiper-wrapper" id="swiper-wrapper-9153502609fcbcae" aria-live="polite" style="transform: translate3d(-1450px, 0px, 0px); transition-duration: 0ms; ">
+            <div class="swiper-slide swiper-slide-prev" role="group" aria-label="1 / 10" style="width: 1440px; margin-right: 10px; opacity: 1;">
+              <img src="./images/prod1.png" >
+            </div>
+            <div class="swiper-slide swiper-slide-active" role="group" aria-label="2 / 10" style="width: 1440px; margin-right: 10px;opacity: 1;">
+              <img src="./images/prod2.png">
+            </div>
+            <div class="swiper-slide swiper-slide-next" role="group" aria-label="3 / 10" style="width: 1440px; margin-right: 10px;opacity: 1;">
+              <img src="./images/prod3.png">
+            </div>
+            <div class="swiper-slide" role="group" aria-label="4 / 10" style="width: 1440px; margin-right: 10px;opacity: 1;">
+              <img src="./images/prod4.png">
+            </div>
+            <div class="swiper-slide" role="group" aria-label="5 / 10" style="width: 1440px; margin-right: 10px;opacity: 1;">
+              <img src="./images/logo2.png">
+            </div>
+       <!--      <div class="swiper-slide" role="group" aria-label="5 / 10" style="width: 1440px; margin-right: 10px;">
+              <img src="https://swiperjs.com/demos/images/nature-5.jpg">
+            </div>
+            <div class="swiper-slide" role="group" aria-label="6 / 10" style="width: 1440px; margin-right: 10px;">
+              <img src="https://swiperjs.com/demos/images/nature-6.jpg">
+            </div>
+            <div class="swiper-slide" role="group" aria-label="7 / 10" style="width: 1440px; margin-right: 10px;">
+              <img src="https://swiperjs.com/demos/images/nature-7.jpg">
+            </div>
+            <div class="swiper-slide" role="group" aria-label="8 / 10" style="width: 1440px; margin-right: 10px;">
+              <img src="https://swiperjs.com/demos/images/nature-8.jpg">
+            </div>
+            <div class="swiper-slide" role="group" aria-label="9 / 10" style="width: 1440px; margin-right: 10px;">
+              <img src="https://swiperjs.com/demos/images/nature-9.jpg">
+            </div>
+            <div class="swiper-slide" role="group" aria-label="10 / 10" style="width: 1440px; margin-right: 10px;">
+              <img src="https://swiperjs.com/demos/images/nature-10.jpg">
+            </div> -->
+          </div>
+
+
+          <!-- <div id="nextprevBtn" class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-9153502609fcbcae" aria-disabled="false"></div>
+          <div id="nextprevBtn" class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-9153502609fcbcae" aria-disabled="false"></div> -->
+
+
+  
+    <!--         <div class="swiper-slide" role="group" aria-label="5 / 10" style="width: 352.5px; margin-right: 10px;">
+              <img src="https://swiperjs.com/demos/images/nature-5.jpg">
+            </div>
+            <div class="swiper-slide" role="group" aria-label="6 / 10" style="width: 352.5px; margin-right: 10px;">
+              <img src="https://swiperjs.com/demos/images/nature-6.jpg">
+            </div>
+            <div class="swiper-slide" role="group" aria-label="7 / 10" style="width: 352.5px; margin-right: 10px;">
+              <img src="https://swiperjs.com/demos/images/nature-7.jpg">
+            </div>
+            <div class="swiper-slide" role="group" aria-label="8 / 10" style="width: 352.5px; margin-right: 10px;">
+              <img src="https://swiperjs.com/demos/images/nature-8.jpg">
+            </div>
+            <div class="swiper-slide" role="group" aria-label="9 / 10" style="width: 352.5px; margin-right: 10px;">
+              <img src="https://swiperjs.com/demos/images/nature-9.jpg">
+            </div>
+            <div class="swiper-slide" role="group" aria-label="10 / 10" style="width: 352.5px; margin-right: 10px;">
+              <img src="https://swiperjs.com/demos/images/nature-10.jpg">
+            </div> -->
+          
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+    </div>
+    </div>  <!-- Closing allSliderDiv-->
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 10,
+        slidesPerView: 20,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var swiper2 = new Swiper(".mySwiper2", {
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+          swiper: swiper,
+        },
+      });
+      // $('.prodList1').on('mouseover', function() {
+      //   $('.prodList1').trigger(click);
+      // })
+    </script>
+
+    <script>
+        function change1() {
+          document.getElementById("prodSmall1").hide();
+      }
+    </script>
